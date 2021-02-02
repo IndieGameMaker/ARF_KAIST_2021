@@ -138,6 +138,8 @@ GameObject:
   - component: {fileID: 21856224}
   - component: {fileID: 21856223}
   - component: {fileID: 21856225}
+  - component: {fileID: 21856227}
+  - component: {fileID: 21856226}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -180,7 +182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21856218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
@@ -194,7 +196,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21856218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ab0e80cee9cc1d44928bfe488dd1e2d, type: 3}
   m_Name: 
@@ -207,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21856218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
   m_Name: 
@@ -220,7 +222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21856218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29c6ebecde3274fe097e51b72f22b920, type: 3}
   m_Name: 
@@ -238,6 +240,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9d1afae6bc34c36b0a313f6a8169f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &21856226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21856218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef0d63a8addd374c891222b14cde8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RegionPrefab: {fileID: 2309985299502420566, guid: 1bc7574d04ecb4e0093dba23ae5958e7, type: 3}
+--- !u!114 &21856227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21856218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caeceacb624484daf8e379c2252fd246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FacePrefab: {fileID: 0}
+  m_MaximumFaceCount: 1
 --- !u!1 &640914151
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +432,7 @@ GameObject:
   - component: {fileID: 1142921101}
   - component: {fileID: 1142921100}
   - component: {fileID: 1142921099}
+  - component: {fileID: 1142921103}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -483,7 +513,7 @@ MonoBehaviour:
   m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_LightEstimation: 1
-  m_FacingDirection: 1
+  m_FacingDirection: 2
 --- !u!114 &1142921101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,3 +540,19 @@ Transform:
   m_Father: {fileID: 21856220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142921103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142921097}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 0
+  m_HumanSegmentationDepthMode: 0
+  m_EnvironmentDepthMode: 1
+  m_OcclusionPreferenceMode: 0
