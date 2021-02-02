@@ -31,12 +31,14 @@ public class PlacerManager : MonoBehaviour
             {
                 if (!isCreated)
                 {
+                    Debug.Log("Create Warrior !!!");
                     warriorObj = Instantiate(warrior, hits[0].pose.position, hits[0].pose.rotation);
                     isCreated = true;
                 }
                 else
                 {
-                   warriorObj.GetComponent<WarriorCtrl>().MoveWarrior(hits[0].pose.position);
+                    Debug.Log($"hits[0].pose.position = {hits[0].pose.position}");
+                    warriorObj.GetComponent<WarriorCtrl>().MoveWarrior(hits[0].pose.position);
                 }
             }
         }      
