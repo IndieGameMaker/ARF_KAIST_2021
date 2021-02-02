@@ -12,6 +12,7 @@ public class PlacerManager : MonoBehaviour
 
     private ARRaycastManager raycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private GameObject warriorObj;
 
     void Start()
     {
@@ -30,8 +31,12 @@ public class PlacerManager : MonoBehaviour
             {
                 if (!isCreated)
                 {
-                    Instantiate(warrior, hits[0].pose.position, hits[0].pose.rotation);
+                    warriorObj = Instantiate(warrior, hits[0].pose.position, hits[0].pose.rotation);
                     isCreated = true;
+                }
+                else
+                {
+                    warriorObj.GetComponent<WarriorCtrl>().MoveWarrior(hits[0].pose.position);
                 }
             }
         }      
