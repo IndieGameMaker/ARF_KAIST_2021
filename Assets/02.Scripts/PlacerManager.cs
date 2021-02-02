@@ -18,9 +18,22 @@ public class PlacerManager : MonoBehaviour
         raycastManager = GetComponent<ARRaycastManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.touchCount == 0) return;
+
+        Touch touch = Input.GetTouch(0);
+        //처음 터치가 시작됐을 때 한번 동작하기위서
+        if (touch.phase == TouchPhase.Began)
+        {
+            if (raycastManager.Raycast(touch.position, hits, TrackableType.All))
+            {
+                if (!isCreated)
+                {
+                    Instantiate(warrior, hits[0].pose.position, hits[0].pose.rotation);
+                    isCreated = true;
+                }
+            }
+        }        
     }
 }
