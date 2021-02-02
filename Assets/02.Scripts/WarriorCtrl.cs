@@ -5,7 +5,7 @@ using UnityEngine;
 public class WarriorCtrl : MonoBehaviour
 {
     public float moveSpeed = 0.2f;
-    public float turnSpeed = 20.0f;
+    public float turnSpeed = 10.0f;
     public Vector3 movePos = Vector3.zero;
     public bool isMove = false;
 
@@ -27,7 +27,11 @@ public class WarriorCtrl : MonoBehaviour
         //목적지를 바라보는 벡터 계산 (목적지좌표 - 현재좌표)
         Vector3 dir = movePos - transform.position;
         //회전각도를 계산
+        Quaternion rot = Quaternion.LookRotation(dir);
+
         //회전처리 , 보간함수(선형보간 Lerp, 스피어리컬보간 Slerp)
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * turnSpeed);
         //직진이동
+        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
     }
 }

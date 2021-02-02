@@ -34,6 +34,6 @@ public class PlacerManager : MonoBehaviour
                     isCreated = true;
                 }
             }
-        }        
+        }      
     }
 }
