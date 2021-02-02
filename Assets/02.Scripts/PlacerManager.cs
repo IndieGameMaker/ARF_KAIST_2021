@@ -36,7 +36,7 @@ public class PlacerManager : MonoBehaviour
                 }
                 else
                 {
-                    warriorObj.GetComponent<WarriorCtrl>().MoveWarrior(hits[0].pose.position);
+                   warriorObj.GetComponent<WarriorCtrl>().MoveWarrior(hits[0].pose.position);
                 }
             }
         }      
