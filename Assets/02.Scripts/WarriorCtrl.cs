@@ -24,6 +24,18 @@ public class WarriorCtrl : MonoBehaviour
     {
         if (isMove == false) return;
 
+        //거리 Vector3.Distance(a, b)
+        // (a - b).sqrMagnitude
+        if ((transform.position - movePos).sqrMagnitude <= 0.02f * 0.02f)
+        {
+            isMove = false;
+            GetComponent<Animator>().SetFloat("Movement", 0.0f);
+            return;
+        }
+
+        //Animation
+        GetComponent<Animator>().SetFloat("Movement", 1.0f);
+
         //목적지를 바라보는 벡터 계산 (목적지좌표 - 현재좌표)
         Vector3 dir = movePos - transform.position;
         //회전각도를 계산
